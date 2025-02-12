@@ -1,7 +1,6 @@
 ---
 title: "Causal Inference for Earth System Science"
 author: "Wenbo Lv"
-# institute: "HKUSTGZ AI4City Lab & Curtin Geospatial Intelligence Lab "
 date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
