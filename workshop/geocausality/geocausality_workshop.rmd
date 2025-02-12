@@ -1,0 +1,193 @@
+---
+title: "Causal Inference for Earth System Science"
+author: "Wenbo Lv"
+# institute: "HKUSTGZ AI4City Lab & Curtin Geospatial Intelligence Lab "
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+    seal: false
+---
+class: center, middle
+background-image: url("./fig/fig_01.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_02.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_03.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_04.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_05.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_06.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_07.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_08.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_09.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_10.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_11.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_12.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_13.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_14.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_15.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_16.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_17.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_18.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_19.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_20.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_21.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_22.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_23.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_24.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_25.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_26.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_27.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_28.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_29.png")
+background-position: center
+background-size: contain
+
+---
+class: center, middle
+background-image: url("./fig/fig_30.png")
+background-position: center
+background-size: contain
