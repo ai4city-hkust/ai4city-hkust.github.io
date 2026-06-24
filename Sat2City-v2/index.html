@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Sat2City v2: Native 3D City Asset Generation from a Single Satellite Image">
+  <meta name="keywords" content="Sat2City, satellite image, 3D city generation, textured mesh, geospatial AI">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sat2City v2</title>
+
+  <script defer src="../BuildAnyPoint/static/js/fontawesome.all.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="../BuildAnyPoint/static/css/bulma.min.css">
+  <link rel="stylesheet" href="../BuildAnyPoint/static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="icon" href="assets/logo-pure.png">
+</head>
+<body>
+
+<section class="hero publication-header">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            <img src="assets/logo-pure.png" width="58" alt="Sat2City logo">
+            <span class="depth">Sat2City v2</span>
+          </h1>
+          <h2 class="title is-2 publication-subtitle">
+            Native 3D City Asset Generation from a Single Satellite Image
+          </h2>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Tongyan Hua<sup>&dagger;1</sup></span>&nbsp;&nbsp;&nbsp;
+            <span class="author-block">Dongli Wu<sup>&dagger;1</sup></span>&nbsp;&nbsp;&nbsp;
+            <span class="author-block">Jinjing Zhu<sup>2</sup></span>&nbsp;&nbsp;&nbsp;
+            <span class="author-block">Yinrui Ren<sup>1</sup></span>&nbsp;&nbsp;&nbsp;
+            <span class="author-block">Zhongcheng Hong<sup>1</sup></span>&nbsp;&nbsp;&nbsp;
+            <span class="author-block">Ying-Cong Chen<sup>1,4</sup></span>&nbsp;&nbsp;&nbsp;
+            <span class="author-block">Hui Xiong<sup>1,4</sup></span>&nbsp;&nbsp;&nbsp;
+            <span class="author-block">Wufan Zhao<sup>&#9993;1</sup></span>
+          </div>
+
+          <div class="column is-full_width">
+            <h2 class="title is-4 venue">Pre-print</h2>
+          </div>
+
+          <div class="is-size-5 publication-authors affiliations">
+            <span class="author-block"><sup>1</sup>HKUST(GZ)</span>&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>The Chinese University of Hong Kong</span>&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>4</sup>HKUST</span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>&dagger;</sup>Equal contribution</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2507.04403" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://ai4city-hkust.github.io/Sat2City/" class="external-link button is-normal is-rounded is-light">
+                  <span class="icon"><i class="fas fa-city"></i></span>
+                  <span>Sat2City v1</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-light is-disabled" aria-disabled="true">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code Coming</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#results" class="external-link button is-normal is-rounded is-light">
+                  <span class="icon"><i class="fas fa-cube"></i></span>
+                  <span>Results</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section teaser-section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <img src="assets/teaser.png" class="center teaser-image" alt="Sat2City v2 teaser">
+        <h2 class="subtitle has-text-centered teaser-caption">
+          Given a single satellite image, <span class="depth">Sat2City v2</span> generates explicit city-scale geometry
+          and satellite-consistent textured mesh assets.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Generating explicit, high-quality 3D city assets from a single satellite image is important for digital
+            twins, urban simulation, and geospatial intelligence. Sat2City v2 advances the original Sat2City from a
+            synthetic height-map-conditioned generator to a real-world, appearance-controllable satellite-to-3D asset
+            framework. The key idea is to adapt a pretrained native structured-latent 3D foundation model to weakly
+            aligned satellite-image and textured-mesh pairs collected from matched geographic bounding boxes.
+          </p>
+          <p>
+            We construct a dataset with 14,651 training and 1,590 held-out test satellite-mesh pairs across 24 regions
+            in 9 cities. Sat2City v2 encodes each city mesh into a pretrained native 3D latent space, fine-tunes an
+            image-conditioned shape-flow model, and uses the decoded shape as an anchor for satellite-conditioned
+            texturing. The resulting pipeline produces reusable textured mesh assets instead of rendering-oriented 3D
+            proxies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section compact-section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">What Is New in v2?</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-heading">
+              <div class="feature-icon"><i class="fas fa-globe-americas"></i></div>
+              <span class="feature-label">Data</span>
+            </div>
+            <h3>Synthetic &rarr; Real</h3>
+            <p>Sat2City v1 supports synthetic data only; v2 learns from real satellite imagery and real-world city meshes.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-heading">
+              <div class="feature-icon"><i class="fas fa-sliders-h"></i></div>
+              <span class="feature-label">Appearance</span>
+            </div>
+            <h3>Random &rarr; Controllable</h3>
+            <p>In v1, appearance is generated randomly; v2 conditions appearance on the input satellite image.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-heading">
+              <div class="feature-icon"><i class="fas fa-expand-arrows-alt"></i></div>
+              <span class="feature-label">Resolution</span>
+            </div>
+            <h3>128 &rarr; 512</h3>
+            <p>Increases resolution from 128 in v1 to 512 in v2, recovering finer city geometry and texture details.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section results-section" id="results">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+        <div class="demo-grid" id="demo-grid"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+<pre><code>@article{hua2026sat2cityv2,
+  title={Sat2City v2: Native 3D City Asset Generation from a Single Satellite Image},
+  author={Hua, Tongyan and Wu, Dongli and Zhu, Jinjing and Ren, Yinrui and Hong, Zhongcheng and Chen, Ying-Cong and Xiong, Hui and Zhao, Wufan},
+  journal={Pre-print},
+  year={2026}
+}</code></pre>
+  </div>
+</section>
+
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  <tr>
+    <td>
+      <br>
+      <p align="center">
+        <font size="2">
+          <a href="https://github.com/ai4city-hkust">
+            <font size="2" color="lightgray">AI4City Lab, HKUST(GZ)</font>
+          </a>
+          <br>
+        </font>
+      </p>
+      <br>
+    </td>
+  </tr>
+</table>
+
+<script>
+  const sampleDirs = [
+    'vid/new-york_-74.01023_40.71341_-73.97458_40.74033_fin_225__-73.97704_40.72060_-73.97467_40.72239',
+    'vid/new-york_-74.01023_40.71341_-73.97458_40.74033_fin_225__-73.98415_40.72958_-73.98178_40.73138',
+    'vid/new-york_-74.01023_40.71341_-73.97458_40.74033_fin_225__-74.00549_40.71880_-74.00312_40.72060',
+    'vid/new-york_-74.01023_40.71341_-73.97458_40.74033_fin_225__-74.00549_40.72778_-74.00312_40.72958',
+    'vid/new-york_-74.01928_40.70152_-73.99563_40.71945_fin_84__-74.00269_40.71230_-74.00032_40.71410',
+    'vid/new-york_-74.01928_40.70152_-73.99563_40.71945_fin_84__-74.00506_40.71230_-74.00269_40.71410',
+    'vid/new-york_-74.01928_40.70152_-73.99563_40.71945_fin_84__-74.00506_40.71589_-74.00269_40.71769',
+    'vid/new-york_-74.01928_40.70152_-73.99563_40.71945_fin_84__-74.00743_40.71230_-74.00506_40.71410',
+    'vid/new-york_-74.01928_40.70152_-73.99563_40.71945_fin_84__-74.00743_40.71410_-74.00506_40.71589',
+    'vid/new-york_-74.01928_40.70152_-73.99563_40.71945_fin_84__-74.00980_40.70152_-74.00743_40.70332',
+    'vid/new-york_-74.01928_40.70152_-73.99563_40.71945_fin_84__-74.00980_40.70511_-74.00743_40.70691',
+    'vid/new-york_-74.01928_40.70152_-73.99563_40.71945_fin_84__-74.01217_40.70332_-74.00980_40.70511',
+    'vid/new-york_-74.01928_40.70152_-73.99563_40.71945_fin_84__-74.01454_40.70332_-74.01217_40.70511',
+    'vid/new-york_-74.01928_40.70152_-73.99563_40.71945_fin_84__-74.01454_40.70871_-74.01217_40.71050',
+    'vid/new-york_-74.01928_40.70152_-73.99563_40.71945_fin_84__-74.01454_40.71050_-74.01217_40.71230',
+    'vid/new-york_-74.01928_40.70152_-73.99563_40.71945_fin_84__-74.01454_40.71230_-74.01217_40.71410',
+    'vid/new-york_-74.01928_40.70152_-73.99563_40.71945_fin_84__-74.01691_40.70152_-74.01454_40.70332',
+    'vid/new-york_-74.01928_40.70152_-73.99563_40.71945_fin_84__-74.01691_40.71410_-74.01454_40.71589',
+    'vid/new-york_-74.01928_40.70152_-73.99563_40.71945_fin_84__-74.01928_40.70332_-74.01691_40.70511',
+    'vid/new-york_-74.01928_40.70152_-73.99563_40.71945_fin_84__-74.01928_40.71050_-74.01691_40.71230'
+  ];
+
+  const demoGrid = document.getElementById('demo-grid');
+  sampleDirs.forEach((dir, index) => {
+    const card = document.createElement('article');
+    card.className = 'demo-card';
+
+    const media = document.createElement('div');
+    media.className = 'demo-media';
+
+    const input = document.createElement('img');
+    input.className = 'demo-input';
+    input.src = `${dir}/trellis/input_processed.png`;
+    input.alt = `Sat2City v2 sample ${index + 1} satellite input`;
+    input.loading = 'lazy';
+
+    const normal = document.createElement('video');
+    normal.className = 'demo-video';
+    normal.autoplay = true;
+    normal.muted = true;
+    normal.loop = true;
+    normal.playsInline = true;
+    normal.controls = true;
+    normal.preload = 'metadata';
+    normal.src = `${dir}/trellis/rotate_eval_y_up/normal_rotate_y_up.mp4`;
+
+    const texture = document.createElement('video');
+    texture.className = 'demo-video';
+    texture.autoplay = true;
+    texture.muted = true;
+    texture.loop = true;
+    texture.playsInline = true;
+    texture.controls = true;
+    texture.preload = 'metadata';
+    texture.src = `${dir}/trellis/rotate_eval_y_up/texture_rotate_y_up.mp4`;
+
+    media.append(input, normal, texture);
+    card.append(media);
+    demoGrid.append(card);
+  });
+</script>
+
+</body>
+</html>
