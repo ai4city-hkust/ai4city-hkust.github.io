@@ -1,8 +1,8 @@
 .DS_Store
 
 # Sat2City-v2 result intermediates not used by the project page.
-Sat2City-v2/vid/**/trellis/mesh_with_voxel.pt
-Sat2City-v2/vid/**/trellis/pred_mesh.obj
-Sat2City-v2/vid/**/trellis/textured_mesh.glb
-Sat2City-v2/vid/**/trellis/render_paper/
-Sat2City-v2/vid/**/trellis/renders/
+Sat2City-v2/vid/**/sat2city-v2/mesh_with_voxel.pt
+Sat2City-v2/vid/**/sat2city-v2/pred_mesh.obj
+Sat2City-v2/vid/**/sat2city-v2/textured_mesh.glb
+Sat2City-v2/vid/**/sat2city-v2/render_paper/
+Sat2City-v2/vid/**/sat2city-v2/renders/

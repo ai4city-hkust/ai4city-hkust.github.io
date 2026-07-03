@@ -48,7 +48,7 @@
 
           <div class="is-size-5 publication-authors affiliations">
             <span class="author-block"><sup>1</sup>HKUST(GZ)</span>&nbsp;&nbsp;&nbsp;
-            <span class="author-block"><sup>2</sup>The Chinese University of Hong Kong</span>&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>CUHK</span>&nbsp;&nbsp;&nbsp;
             <span class="author-block"><sup>3</sup>HKUST</span>
           </div>
 
@@ -248,7 +248,7 @@
 
     const input = document.createElement('img');
     input.className = 'demo-input';
-    input.src = `${dir}/trellis/input_processed.png`;
+    input.src = `${dir}/sat2city-v2/input_processed.png`;
     input.alt = `Sat2City v2 sample ${index + 1} satellite input`;
     input.loading = 'lazy';
 
@@ -260,7 +260,7 @@
     normal.playsInline = true;
     normal.controls = true;
     normal.preload = 'metadata';
-    normal.src = `${dir}/trellis/rotate_eval_y_up/normal_rotate_y_up.mp4`;
+    normal.src = `${dir}/sat2city-v2/rotate_eval_y_up/normal_rotate_y_up.mp4`;
 
     const texture = document.createElement('video');
     texture.className = 'demo-video';
@@ -270,7 +270,7 @@
     texture.playsInline = true;
     texture.controls = true;
     texture.preload = 'metadata';
-    texture.src = `${dir}/trellis/rotate_eval_y_up/texture_rotate_y_up.mp4`;
+    texture.src = `${dir}/sat2city-v2/rotate_eval_y_up/texture_rotate_y_up.mp4`;
 
     media.append(input, normal, texture);
     card.append(media);
