@@ -114,15 +114,16 @@
             Generating explicit, high-quality 3D city assets from a single satellite image is important for digital
             twins, urban simulation, and geospatial intelligence. Sat2City v2 advances the original Sat2City from a
             synthetic height-map-conditioned generator to a real-world, appearance-controllable satellite-to-3D asset
-            framework. The key idea is to adapt a pretrained native structured-latent 3D foundation model to weakly
-            aligned satellite-image and textured-mesh pairs collected from matched geographic bounding boxes.
+            framework. The key idea is to adapt a native structured-latent 3D prior pretrained on curated assets to
+            weakly aligned satellite-image and textured-mesh pairs collected from matched geographic bounding boxes.
           </p>
           <p>
-            We construct a dataset with 14,651 training and 1,590 held-out test satellite-mesh pairs across 24 regions
-            in 9 cities. Sat2City v2 encodes each city mesh into a pretrained native 3D latent space, fine-tunes an
-            image-conditioned shape-flow model, and uses the decoded shape as an anchor for satellite-conditioned
-            texturing. The resulting pipeline produces reusable textured mesh assets instead of rendering-oriented 3D
-            proxies.
+            We construct a real-world dataset of 16,027 geographically matched but weakly aligned satellite-image and
+            textured-mesh pairs, comprising 14,651 training pairs and 1,376 held-out test pairs. The training split
+            covers 24 regions in 9 cities. Sat2City v2 encodes each city mesh into a pretrained native 3D latent space,
+            fine-tunes an image-conditioned shape-flow model, and uses the decoded shape as an anchor for
+            satellite-conditioned texturing. The resulting pipeline produces reusable textured mesh assets instead of
+            rendering-oriented 3D proxies.
           </p>
         </div>
       </div>
